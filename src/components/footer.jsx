@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom */}
+      
       <div
         className="text-center py-3 text-xs border-t"
         style={{ color: 'var(--text-faint)', borderColor: 'var(--border-color)', fontFamily: "var(--font-body)" }}

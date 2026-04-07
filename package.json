@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "serve -s dist",
+    "homepage": "https://sukumar5705.github.io/my-portfolio",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

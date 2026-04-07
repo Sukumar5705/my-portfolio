@@ -4,10 +4,12 @@
     <!-- Basic -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Favicon (PUT IMAGE IN public folder) -->
-    <link rel="icon" type="image/png" href="./src/assets/circle_profile.png" />
-
+<script>
+  // Handle SPA redirect from 404.html
+  const p = new URLSearchParams(window.location.search).get('p');
+  if (p) window.history.replaceState(null, '', '/my-portfolio' + p);
+</script>
+<link rel="icon" type="image/png" href="/my-portfolio/circle_profile.png" />
     <!-- Primary SEO -->
     <title>Sukumar Erugadindla | Software Developer Portfolio</title>
     <meta
