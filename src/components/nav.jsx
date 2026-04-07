@@ -249,7 +249,7 @@ const App = () => {
             />
 
             <a
-              href="../../SUKUMAR'S_RESUME.pdf"
+              href="/my-portfolio/SUKUMARS_RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-sm font-medium"
