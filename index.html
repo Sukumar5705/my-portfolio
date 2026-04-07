@@ -4,7 +4,11 @@
     <!-- Basic -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<script>
+  // Handle SPA redirect from 404.html
+  const p = new URLSearchParams(window.location.search).get('p');
+  if (p) window.history.replaceState(null, '', '/my-portfolio' + p);
+</script>
 <link rel="icon" type="image/png" href="/my-portfolio/circle_profile.png" />
     <!-- Primary SEO -->
     <title>Sukumar Erugadindla | Software Developer Portfolio</title>
@@ -41,7 +45,7 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/my-portfolio/assets/index-CETSwsOu.js"></script>
+    <script type="module" crossorigin src="/my-portfolio/assets/index-BZCa52kp.js"></script>
     <link rel="stylesheet" crossorigin href="/my-portfolio/assets/index-zf6M44mT.css">
   </head>
 
