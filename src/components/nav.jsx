@@ -249,11 +249,7 @@ const App = () => {
             />
 
             <a
-<<<<<<< HEAD
-              href="/my-portfolio/SUKUMARS_RESUME.pdf"
-=======
-              href="../../public/SUKUMAR'S_RESUME.pdf"
->>>>>>> f89bc2d (Fixed resume path issue for GitHub Pages)
+              href="../../public/SUKUMARS_RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-sm font-medium"
