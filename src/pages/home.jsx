@@ -2,6 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import RotatingText from '../components/text.jsx';
 import profileImg from '../assets/circle_profile.png';
+import {
+  GraduationCap,
+  MapPin,
+  Briefcase,
+  Trophy,
+  Mail,
+  Cloud,
+  BarChart3,
+  Code
+} from "lucide-react";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -305,31 +315,71 @@ const Home = () => {
               </div>
 
               {/* Quick Facts Card */}
-              <div className="card p-5 sticky top-24 h-fit max-w-sm"
-                style={{ backgroundColor: "var(--bg-card)", border: "1px solid var(--border-color)", borderRadius: "16px" }}>
-                <h3 className="text-sm font-semibold mb-5"
-                  style={{ fontFamily: "var(--font-display)", color: "var(--text-color)" }}>
-                  Profile Snapshot
-                </h3>
-                {[
-                  { icon: "🎓", label: "Education", value: "B.Tech CSE, MGIT (2023–2027)" },
-                  { icon: "📍", label: "Location", value: "Hyderabad, India" },
-                  { icon: "💼", label: "Interests", value: "Full Stack · ML · Backend Systems" },
-                  { icon: "🏆", label: "Highlight", value: "Team Lead — HackSavvy-25" },
-                  { icon: "✉️", label: "Email", value: "erugadindlasukumar5@gmail.com" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 mb-4 last:mb-0">
-                    <span className="text-base mt-0.5">{item.icon}</span>
-                    <div>
-                      <span className="text-xs font-medium block"
-                        style={{ color: "var(--text-faint)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                        {item.label}
-                      </span>
-                      <span className="text-sm" style={{ color: "var(--text-color)" }}>{item.value}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            {/* Quick Facts Card */}
+<div className="card p-5 sticky top-24 h-fit max-w-sm"
+  style={{ backgroundColor: "var(--bg-card)", border: "1px solid var(--border-color)", borderRadius: "16px" }}>
+
+  <h3 className="text-sm font-semibold mb-5"
+    style={{ fontFamily: "var(--font-display)", color: "var(--text-color)" }}>
+    Profile Snapshot
+  </h3>
+
+  {[
+    {
+      icon: GraduationCap,
+      label: "Education",
+      value: "B.Tech CSE @ MGIT (2023–2027)"
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Hyderabad, India"
+    },
+    {
+      icon: Briefcase,
+      label: "Interests",
+      value: "Backend • ML • Full Stack Systems"
+    },
+    {
+      icon: Trophy,
+      label: "Highlight",
+      value: "Team Lead — HackSavvy-25"
+    },
+    {
+      icon: Mail,
+      label: "Email",
+      value: "erugadindlasukumar5@gmail.com"
+    },
+  ].map((item, i) => {
+    const Icon = item.icon;
+    return (
+      <div key={i} className="flex items-start gap-3 mb-4 last:mb-0 group">
+
+        {/* ICON */}
+        <div className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition">
+          <Icon size={16} className="text-indigo-400 group-hover:text-indigo-300 transition" />
+        </div>
+
+        {/* TEXT */}
+        <div>
+          <span className="text-xs font-medium block"
+            style={{
+              color: "var(--text-faint)",
+              textTransform: "uppercase",
+              letterSpacing: "0.05em"
+            }}>
+            {item.label}
+          </span>
+
+          <span className="text-sm"
+            style={{ color: "var(--text-color)" }}>
+            {item.value}
+          </span>
+        </div>
+      </div>
+    );
+  })}
+</div>
             </div>
           </div>
         </section>
