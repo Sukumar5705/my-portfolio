@@ -395,23 +395,77 @@ const Home = () => {
             Certifications
           </h2>
           <div className="grid sm:grid-cols-3 gap-4">
-            {[
-              { org: "Oracle", name: "OCI 2025 AI Foundations Associate", date: "Sep 2025", badge: "☁️", color: "#F80000" },
-              { org: "Deloitte / Forage", name: "Data Analytics Job Simulation", date: "Aug 2025", badge: "📊", color: "#86BC25" },
-              { org: "Cisco Netacad", name: "JavaScript Essentials 1 & 2 + Python Essentials", date: "May 2025", badge: "🌐", color: "#1BA0D7" },
-            ].map((cert, i) => (
-              <div key={i} className="card p-5" style={{ backgroundColor: "var(--bg-card)" }}>
-                <div className="text-2xl mb-3">{cert.badge}</div>
-                <div className="text-xs font-semibold mb-1"
-                  style={{ color: cert.color, fontFamily: "var(--font-body)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                  {cert.org}
-                </div>
-                <div className="text-sm font-medium mb-1"
-                  style={{ fontFamily: "var(--font-body)", color: "var(--text-color)" }}>{cert.name}</div>
-                <div className="text-xs" style={{ color: "var(--text-faint)", fontFamily: "var(--font-body)" }}>{cert.date}</div>
-              </div>
-            ))}
-          </div>
+  {[
+    {
+      org: "Oracle",
+      name: "OCI 2025 AI Foundations Associate",
+      date: "Sep 2025",
+      icon: Cloud,
+      color: "#F80000"
+    },
+    {
+      org: "Deloitte / Forage",
+      name: "Data Analytics Job Simulation",
+      date: "Aug 2025",
+      icon: BarChart3,
+      color: "#86BC25"
+    },
+    {
+      org: "Cisco Netacad",
+      name: "JavaScript & Python Essentials",
+      date: "May 2025",
+      icon: Code,
+      color: "#1BA0D7"
+    },
+  ].map((cert, i) => {
+    const Icon = cert.icon;
+
+    return (
+      <div
+        key={i}
+        className="card p-5 group transition-all duration-300 hover:-translate-y-1"
+        style={{ backgroundColor: "var(--bg-card)" }}
+      >
+
+        {/* ICON */}
+        <div className="p-3 rounded-xl w-fit mb-3"
+          style={{ background: `${cert.color}20` }}>
+          <Icon size={20} style={{ color: cert.color }} />
+        </div>
+
+        {/* ORG */}
+        <div className="text-xs font-semibold mb-1"
+          style={{
+            color: cert.color,
+            fontFamily: "var(--font-body)",
+            textTransform: "uppercase",
+            letterSpacing: "0.05em"
+          }}>
+          {cert.org}
+        </div>
+
+        {/* NAME */}
+        <div className="text-sm font-medium mb-1"
+          style={{
+            fontFamily: "var(--font-body)",
+            color: "var(--text-color)"
+          }}>
+          {cert.name}
+        </div>
+
+        {/* DATE */}
+        <div className="text-xs"
+          style={{
+            color: "var(--text-faint)",
+            fontFamily: "var(--font-body)"
+          }}>
+          {cert.date}
+        </div>
+
+      </div>
+    );
+  })}
+</div>
         </section>
 
       </main>
