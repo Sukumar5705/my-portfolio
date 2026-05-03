@@ -314,12 +314,7 @@ const Home = () => {
                 </p>
               </div>
 
-              {/* Quick Facts Card */}
-<<<<<<< HEAD
-            {/* Quick Facts Card */}
-=======
-              {/* Quick Facts Card */}
->>>>>>> c0b02e3 (icons-change)
+  
 <div className="card p-5 sticky top-24 h-fit max-w-sm"
   style={{ backgroundColor: "var(--bg-card)", border: "1px solid var(--border-color)", borderRadius: "16px" }}>
 
@@ -611,4 +606,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home; 
